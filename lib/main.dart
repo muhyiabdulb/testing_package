@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_package/test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,6 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+    var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
+    voyager.describe();
+
+    var voyager3 = Spacecraft.unlaunched('Voyager III');
+    voyager3.describe();
+
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
